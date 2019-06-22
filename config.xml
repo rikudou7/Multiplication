@@ -17,6 +17,7 @@
     <allow-intent href="geo:*" />
     <platform name="android">
         <allow-intent href="market:*" />
+		<preference name="android-targetSdkVersion" value="28" />
     </platform>
     <platform name="ios">
         <allow-intent href="itms:*" />
@@ -25,5 +26,8 @@
     <engine name="android" spec="8.0.0" />
     <plugin name="cordova-plugin-whitelist" spec="1" />
     <plugin name="admob" />
-	<gap:plugin name="cordova-plugin-admob" source="npm" />
+	<plugin spec="https://github.com/dpa99c/cordova-android-support-gradle-release" source="git" >
+        <variable name="ANDROID_SUPPORT_VERSION" value="28.0.0"/>
+    </plugin>
+    <gap:plugin name="cordova-plugin-admob" source="npm" />
 </widget>
