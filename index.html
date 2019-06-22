@@ -10,24 +10,30 @@ Enter another number: <input type = "textbox" id = "factor2">
 <br>
 <button type = "button" id = "multiply" onclick = "multiply()">Multiply</button>
 <p id = "result"></p>
+<br>
+<p id = "errors"></p>
 </body>
 <script>
 var admobid = { // for Android
   banner: 'ca-app-pub-9974184445996972/3571513619',
   interstitial: 'ca-app-pub-9974184445996972/1549777512'
 };
-document.addEventListener("deviceready", onDeviceReady, false);
+document.addEventListener('deviceready', onDeviceReady, false);
 
 function onDeviceReady() {
   //admob.initAdmob("ca-app-pub-9974184445996972/3571513619","ca-app-pub-9974184445996972/1549777512");
   //The left one is banner and the right one is interstitial
   //This method in theory should make a banner ad pop up every time this function is called.
-  if (AdMob) {
-    AdMob.createBanner({
-      adId : admobid.banner,
-      position : AdMob.AD_POSITION.BOTTOM_CENTER,
-      autoShow : true
-    });
+  try {
+    if (AdMob) {
+      AdMob.createBanner({
+        adId : admobid.banner,
+        position : AdMob.AD_POSITION.BOTTOM_CENTER,
+        autoShow : true
+      });
+    }
+  } catch(e) {
+    document.getElementById("errors").innerHTML = e.message;
   }
 
   
@@ -41,3 +47,4 @@ function multiply() {
 }
 </script>
 </html>
+  
