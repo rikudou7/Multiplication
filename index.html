@@ -1,8 +1,5 @@
 <!DOCTYPE html>
 <html>
-<head>
-<!-- meta name = "keywords" content = "numbers, math, multiply, multiplication, factors, number" --> 
-</head>
 <body>
 Enter a number: <input type = "textbox" id = "factor1">
 <br>
@@ -11,40 +8,15 @@ Enter another number: <input type = "textbox" id = "factor2">
 <button type = "button" id = "multiply" onclick = "multiply()">Multiply</button>
 <p id = "result"></p>
 <br>
-<p id = "errors"></p>
 </body>
 <script>
-// var admobid = { // for Android
-//   banner: 'ca-app-pub-9974184445996972/3571513619',
-//   interstitial: 'ca-app-pub-9974184445996972/1549777512'
-// };
-//document.addEventListener('deviceready', onDeviceReady, false);
 
-// function onDeviceReady() {
-//   //admob.initAdmob("ca-app-pub-9974184445996972/3571513619","ca-app-pub-9974184445996972/1549777512");
-//   //The left one is banner and the right one is interstitial
-//   //This method in theory should make a banner ad pop up every time this function is called.
-//   try {
-//     if (AdMob) {
-//       AdMob.createBanner({
-//         adId : admobid.banner,
-//         position : AdMob.AD_POSITION.BOTTOM_CENTER,
-//         autoShow : true
-//       });
-//     }
-//   } catch(e) {
-//     document.getElementById("errors").innerHTML = e.message;
-//   }
-
-  
-// }
 function multiply() {
   var first = parseFloat(document.getElementById("factor1").value);
   var second = parseFloat(document.getElementById("factor2").value);
   var result = first * second;
   document.getElementById("result").innerHTML = first + " * " + second + " = " + result;
-  //onDeviceReady();
+
 }
 </script>
 </html>
-  
