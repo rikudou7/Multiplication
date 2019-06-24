@@ -23,7 +23,7 @@
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
     </platform>
-    <engine name="android" spec="8.0.0" />
+    <engine name="android" spec="9.0.0" />
     <!-- plugin name="cordova-plugin-whitelist" spec="1" /-->
 	<plugin spec="https://github.com/dpa99c/cordova-android-support-gradle-release#67504e2">
         <variable name="ANDROID_SUPPORT_VERSION" value="28.0.0"/>
