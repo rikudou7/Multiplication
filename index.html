@@ -25,14 +25,14 @@ function onDeviceReady() {
   //The left one is banner and the right one is interstitial
   //This method in theory should make a banner ad pop up every time this function is called.
   try {
-    if (AdMob) {
+    
       AdMob.createBanner({
         //adId : admobid.banner,
-		isTesting: true,
+	isTesting: true,
         position : AdMob.AD_POSITION.BOTTOM_CENTER,
         autoShow : true
       });
-    }
+    
   } catch(e) {
     document.getElementById("errors").innerHTML = e.message;
   }
