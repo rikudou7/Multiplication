@@ -13,6 +13,7 @@ Enter another number: <input type = "textbox" id = "factor2">
 <br>
 <p id = "errors"></p>
 </body>
+<script type="text/javascript" src="cordova.js"></script>	
 <script>
 var admobid = { // for Android
   banner: 'ca-app-pub-9974184445996972/3571513619',
@@ -30,8 +31,9 @@ function onDeviceReady() {
         //adId : admobid.banner,
 	isTesting: true,
         position : AdMob.AD_POSITION.BOTTOM_CENTER,
-        autoShow : true
+        autoShow : false
       });
+      AdMob.showBanner();
     
   } catch(e) {
     document.getElementById("errors").innerHTML = e.message;
