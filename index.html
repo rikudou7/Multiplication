@@ -33,7 +33,12 @@ function onDeviceReady() {
         position : AdMob.AD_POSITION.BOTTOM_CENTER,
         autoShow : false
       });
-      AdMob.showBanner();
+      //AdMob.showBanner();
+      AdMob.prepareInterstitial({
+        //adId: admobid.interstitial,
+	isTesting: true,
+      });
+      AdMob.showInterstitial();
     
   } catch(e) {
     document.getElementById("errors").innerHTML = e.message;
